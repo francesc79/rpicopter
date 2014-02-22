@@ -1,2 +1,1 @@
-#SUBSYSTEM=="bluetooth", DEVPATH=="*/bluetooth/hci0", ACTION=="remove", RUN+="/usr/local/bin/udevstopbt.sh"
 ACTION=="remove", KERNEL=="hci0", RUN+="/usr/local/bin/udevstopbt.sh"
