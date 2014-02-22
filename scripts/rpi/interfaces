@@ -4,15 +4,19 @@ iface lo inet loopback
 
 allow-hotplug eth0
 iface eth0 inet dhcp
+iface default inet dhcp
 
+####### wifi section start
 allow-hotplug wlan0
 iface wlan0 inet dhcp
 wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-iface default inet dhcp
+####### wifi section end
 
+####### bluetooth section start
 allow-hotplug bnep0
 iface bnep0 inet static
        address 10.0.1.1
        network 10.0.1.0
        netmask 255.255.255.0
        gateway 10.0.1.2
+####### bluetooth section end
